@@ -3,9 +3,9 @@
 /**
  * Mark The Letters module
  * @external {jQuery} $ H5P.jQuery
- * @external {UI} UI H5P.JoubelUI
+ * @external {H5P.Question} Question
  */
-H5P.MarkTheLetters = (function ($, Question, UI, Letter, XapiGenerator) {
+H5P.MarkTheLetters = (function ($, Question) {
   /**
    * Initialize module.
    *
@@ -28,7 +28,6 @@ H5P.MarkTheLetters = (function ($, Question, UI, Letter, XapiGenerator) {
     this.XapiGenerator = new MarkTheLetters.XapiGenerator(this);
   }
 
-  MarkTheLetters.prototype = Object.create(H5P.EventDispatcher.prototype);
   MarkTheLetters.prototype = Object.create(H5P.Question.prototype);
   MarkTheLetters.prototype.constructor = MarkTheLetters;
 
@@ -397,4 +396,4 @@ H5P.MarkTheLetters = (function ($, Question, UI, Letter, XapiGenerator) {
   };
 
   return MarkTheLetters;
-})(H5P.jQuery, H5P.Question, H5P.JoubelUI, H5P.Letter, H5P.XapiGenerator);
+})(H5P.jQuery, H5P.Question);
